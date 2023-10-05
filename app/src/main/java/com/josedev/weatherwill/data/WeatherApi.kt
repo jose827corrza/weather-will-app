@@ -1,0 +1,13 @@
+package com.josedev.weatherwill.data
+
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface WeatherApi {
+
+    @GET("v1/forecast?hourly=temperature_2m,weathercode,relativehumidity_2m,windspeed_10m,pressure_msl")
+    suspend fun getWeatherDate(
+        @Query("latitude")lat: Double,
+        @Query("longitude")lon: Double,
+    ): WeatherDto
+}
