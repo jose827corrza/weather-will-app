@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationManager
+import android.util.Log
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.josedev.weatherwill.domain.location.LocationTracker
@@ -41,6 +42,7 @@ class DefaultLocationTracker @Inject constructor(
             locationClient.lastLocation.apply {
                 if(isComplete){
                     if(isSuccessful){
+                        Log.d(result.toString(),"debug")
                         con.resume(result)
                     } else {
                         con.resume(null)
@@ -48,9 +50,11 @@ class DefaultLocationTracker @Inject constructor(
                     return@suspendCancellableCoroutine
                 }
                 addOnSuccessListener {
+                    Log.d(result.toString(),"debug")
                     con.resume(it)
                 }
                 addOnFailureListener {
+                    Log.d("ERROR","debug")
                     con.resume(null)
                 }
                 addOnCanceledListener {
