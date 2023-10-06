@@ -39,7 +39,7 @@ fun WeatherCard(
             colors = CardDefaults.cardColors(
                 containerColor = backgroundColor
             ),
-            modifier = Modifier.padding(16.dp)
+            modifier = modifier.padding(16.dp)
         ) {
             Column(
                 modifier = Modifier

@@ -15,7 +15,7 @@ android {
         applicationId = "com.josedev.weatherwill"
         minSdk = 30
         targetSdk = 33
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -92,7 +92,7 @@ dependencies {
     ksp("com.google.dagger:dagger-compiler:2.48") // Dagger compiler
     ksp("com.google.dagger:hilt-compiler:2.48")  // Hilt compiler
 
-    // Glande - Widget
-    implementation("androidx.glance:glance-appwidget:1.0.0")
-    implementation("androidx.glance:glance:1.0.0")
+    // Glance - Widget
+    implementation("androidx.glance:glance-appwidget:1.0.0-alpha05")
+    implementation("androidx.glance:glance:1.0.0-alpha05")
 }

@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import com.josedev.weatherwill.presentation.ui.theme.DarkBlue
 import com.josedev.weatherwill.presentation.ui.theme.DeepBlue
 import com.josedev.weatherwill.presentation.ui.theme.WeatherWillTheme
+import com.josedev.weatherwill.widget.WeatherWidget
 import dagger.hilt.android.AndroidEntryPoint
 
 //In order to inject
@@ -72,6 +73,7 @@ class MainActivity : ComponentActivity() {
                         Spacer(modifier = Modifier.height(16.dp))
 
                         WeatherForecast(state = viewModel.state)
+
                     }
                     if (viewModel.state.isLoading){
                         CircularProgressIndicator(
