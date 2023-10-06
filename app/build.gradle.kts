@@ -91,4 +91,8 @@ dependencies {
 //    implementation("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.20-Beta2-1.0.13")
     ksp("com.google.dagger:dagger-compiler:2.48") // Dagger compiler
     ksp("com.google.dagger:hilt-compiler:2.48")  // Hilt compiler
+
+    // Glande - Widget
+    implementation("androidx.glance:glance-appwidget:1.0.0")
+    implementation("androidx.glance:glance:1.0.0")
 }

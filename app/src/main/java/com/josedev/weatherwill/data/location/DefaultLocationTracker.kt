@@ -42,7 +42,6 @@ class DefaultLocationTracker @Inject constructor(
             locationClient.lastLocation.apply {
                 if(isComplete){
                     if(isSuccessful){
-                        Log.d(result.toString(),"debug")
                         con.resume(result)
                     } else {
                         con.resume(null)
@@ -50,11 +49,9 @@ class DefaultLocationTracker @Inject constructor(
                     return@suspendCancellableCoroutine
                 }
                 addOnSuccessListener {
-                    Log.d(result.toString(),"debug")
                     con.resume(it)
                 }
                 addOnFailureListener {
-                    Log.d("ERROR","debug")
                     con.resume(null)
                 }
                 addOnCanceledListener {
